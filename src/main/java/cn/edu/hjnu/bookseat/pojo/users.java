@@ -3,7 +3,7 @@ package cn.edu.hjnu.bookseat.pojo;
 import lombok.Data;
 
 @Data
-public class user {
+public class users {
     private String username;
     private String password;
     private String name;
