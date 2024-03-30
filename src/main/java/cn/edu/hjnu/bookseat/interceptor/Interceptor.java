@@ -1,6 +1,6 @@
 package cn.edu.hjnu.bookseat.interceptor;
 
-import cn.edu.hjnu.bookseat.util.Token;
+import cn.edu.hjnu.bookseat.utils.Token;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;

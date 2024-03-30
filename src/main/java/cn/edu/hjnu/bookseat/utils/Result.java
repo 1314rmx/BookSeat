@@ -1,4 +1,4 @@
-package cn.edu.hjnu.bookseat.util;
+package cn.edu.hjnu.bookseat.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
