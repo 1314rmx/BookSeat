@@ -11,4 +11,5 @@ public class reservations {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String status;
+    private String username;
 }

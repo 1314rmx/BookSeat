@@ -7,7 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 public interface userService {
     public Result<String> login(users users);
 
-    public Result<users> getUserInfo(HttpServletRequest request);
+    public Result<users> getUserInfo();
 
-    Result<String> updatePWD(HttpServletRequest request, String oldPWD, String newPWD);
+    Result<String> updatePWD(String oldPWD, String newPWD);
+
+    Result<String> scan(int seatID);
 }

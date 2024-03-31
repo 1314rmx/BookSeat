@@ -1,10 +1,14 @@
 package cn.edu.hjnu.bookseat.mapper;
 
+import cn.edu.hjnu.bookseat.pojo.reservations;
 import cn.edu.hjnu.bookseat.pojo.users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface userMapper {
@@ -15,4 +19,8 @@ public interface userMapper {
     users getUserInfo(String username);
     @Update("update users set password=#{newPWD} where username=#{username}")
     boolean updatePWD(@Param("username") String username,@Param("newPWD") String newPWD);
+    @Select("select * from seatstatus where seatId=#{seatID};")
+    reservations getSeatStatus(int seatID);
+    @Update("update reservations set status='signed' where reservationID=#{reservationId}")
+    boolean sign(int reservationId);
 }
